@@ -195,6 +195,33 @@ Todoアプリにおける更新画面のテスト観点例
 <p>想定できるエラーを可能な限り<span class="font-bold" v-mark="{ at: 1, color: 'red', type: 'underline'}">網羅的にテスト</span>することが重要</p>
 
 ---
+
+# エラーテストの例
+
+Todoアプリにおける更新画面のテスト実装例
+
+```tsx
+describe("Todo取得通信でエラー", () => {
+  test("ネットワークエラー時、エラーメッセージが表示されること", async () => {
+    // Arrange
+    const apiRequestCall = jest.fn();
+    server.use(
+      rest.get("/api/todos", (req, res, ctx) =>
+        apiRequestCall(HttpResponse.error()),
+      ),
+    );
+    // Act
+    render(<TodoApp />);
+    // Assert
+    expect(await screen.findByRole("alert")).toHaveTextContent(
+      "通信エラーが発生しました。通信環境をご確認の上、再度お試しください。",
+    );
+    expect(apiRequestCall).toHaveBeenCalledTimes(1);
+  });
+});
+```
+
+---
 layout: section
 ---
 
