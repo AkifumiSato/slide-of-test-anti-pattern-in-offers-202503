@@ -206,7 +206,7 @@ describe("Todo取得通信でエラー", () => {
     // Arrange
     const apiRequestCall = jest.fn();
     server.use(
-      rest.get("/api/todos", (req, res, ctx) => {
+      http.get("/api/todos", (req, res, ctx) => {
         return apiRequestCall(HttpResponse.error());
       }),
     );
