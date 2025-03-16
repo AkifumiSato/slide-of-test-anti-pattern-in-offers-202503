@@ -20,23 +20,23 @@ in Offers 202503
 UIテスト二大疾病の根治療法
 
 ---
-layout: two-cols
----
 
 # Profile
 
-- 名前: 佐藤 昭文（あっきー）
-- ID: [akfm_sato](https://x.com/akfm_sato)
-- 仕事: フロントエンドエキスパート
-- 活動
-  - 執筆: e.g. [Next.jsの考え方](https://zenn.dev/akfm/books/nextjs-basic-principle)
-  - OSS: [`location-state`](https://github.com/recruit-tech/location-state)
-
-::right::
-
-<div class="pt-10 flex justify-center">
-  <img src="https://avatars.githubusercontent.com/u/25711332?v=4" width="200" height="200">
+<div class="pb-5">
+  <img src="https://avatars.githubusercontent.com/u/25711332?v=4" width="100" height="100">
 </div>
+
+```json
+{
+  "name": "佐藤 昭文",
+  "alias": ["akfm_sato", "あっきー"],
+  "job": "フロントエンドエキスパート",
+  "tags": ["Next.js", "React", "Test", "リーン開発"],
+  "x": "https://x.com/akfm_sato",
+  "zenn.dev": "https://zenn.dev/akfm"
+}
+```
 
 ---
 
